@@ -5,7 +5,7 @@ import pandas as pd
 pd.options.display.float_format = '{:,.2f}'.format
 
 # Parâmetros iniciais
-valor_inicial = 47453.37  # Valor inicial a ser atualizado
+valor_inicial = 100000.00  # Valor inicial a ser atualizado
 data_inicio = "2023-11-01"
 data_fim = "2024-11-28"
 remuneracao_cdi = 1.20  # Percentual do CDI (120%)
