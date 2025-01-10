@@ -1,2 +1,4 @@
-# gesquant
-Especialização em Gestão Quantitativa de Carteiras
+# Harpa Quant
+### harpaquant.streamlit.app
+
+Ferramentas quantitativas para o investidor prospectivo.
