@@ -1,4 +1,4 @@
-# Pairs Trading S&P
+# Pairs Trading
 
 import pandas as pd
 import math
