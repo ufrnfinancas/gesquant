@@ -103,7 +103,7 @@ padf3 = padf2[padf2['PPR'] <= 0.01] #raiz unit dos residuos
 padf4 = padf3[abs(padf3['DesvioAb']) > padf3['DesvioP']] #pares abertos
 padf5 = padf4[padf4['DesvioAb'] < padf4['Max']] #remove quem esta acima do maximo
 padf6 = padf5[padf5['DesvioAb'] > padf5['Min']] #remove quem esta abaixo do minimo
-df = padf6[padf6['pBeta'] < 0.01] #remove p-valor do beta superior a 0,10
+df = padf6[padf6['pBeta'] < 0.01] #remove p-valor do beta superior a 0,01
 df['acaoCompra'] = None
 df['acaoVende'] = None
 df['acaoVende'] = df['Acao1']
