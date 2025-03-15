@@ -1,40 +1,11 @@
-# Obtendo dados de opções negociadas na B3 - Derivativos em Py #01
-
-# Opções nos EUA
-import yfinance as yf
-
-# Defina o ticker
-symbol = 'NVDA' 
-
-# Crie o objeto
-stock = yf.Ticker(symbol)
-
-# Colete dados das opções - datas de vencimento
-options = stock.options
-
-# E, finalmente, a option chain
-for option_symbol in options:
-    option_chain = stock.option_chain(option_symbol)
-    
-    # Call options
-    call_options = option_chain.calls
-    print(f"Call Options para {option_symbol}:")
-    print(call_options)
-
-    # Put options
-    put_options = option_chain.puts
-    print(f"Put Options para {option_symbol}:")
-    print(put_options)
-
-
-# Opções na B3
+# Obtendo dados de opções negociadas na B3
 import pandas as pd
 import requests
 
 subjacente = 'PETR4'   # não vem do Yfinance! esqueça o ".SA" ao final do ticker!
 
 # Um vencimento
-vencimento = '2024-12-20'      # YYYY-MM-DD
+vencimento = '2025-03-21'      # YYYY-MM-DD
 def optionchaindate(subjacente, vencimento):
     url = f'https://opcoes.net.br/listaopcoes/completa?idAcao={subjacente}&listarVencimentos=false&cotacoes=true&vencimentos={vencimento}'
     r = requests.get(url).json()
