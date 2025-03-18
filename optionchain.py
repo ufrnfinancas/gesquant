@@ -2,7 +2,7 @@
 import pandas as pd
 import requests
 
-subjacente = 'PETR4'   # não vem do Yfinance! esqueça o ".SA" ao final do ticker!
+subjacente = 'BOVA11'   # não vem do Yfinance! esqueça o ".SA" ao final do ticker!
 
 # Um vencimento
 vencimento = '2025-03-21'      # YYYY-MM-DD
