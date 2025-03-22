@@ -9,8 +9,8 @@ print(mt5.version())
 
 ####### Função de paridade put call
 def putcall(ativo, call, put, k):
-    r = 0.099355  # taxa de juros anual na curva 
-    t = 23 / 252  # vencimento em dias/252
+    r = 0.138703  # taxa de juros anual na curva 
+    t = 18 / 252  # vencimento em dias/252
     cost = (
         4.90 * 2 #corretagem
     )  # custos de transacao, corretagens, emolumentos, aluguel
@@ -279,4 +279,4 @@ def putcall(ativo, call, put, k):
 
 
 # Exemplo
-putcall('PETR4','PETRI419', 'PETRU419', 38.17)
+putcall('PETR4','PETRD401', 'PETRP401', 36.41)
