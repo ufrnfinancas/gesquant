@@ -2,10 +2,10 @@
 import pandas as pd
 import requests
 
-subjacente = 'BOVA11'   # não vem do Yfinance! esqueça o ".SA" ao final do ticker!
+subjacente = 'PETR4'   # não vem do Yfinance! esqueça o ".SA" ao final do ticker!
 
 # Um vencimento
-vencimento = '2025-03-21'      # YYYY-MM-DD
+vencimento = '2025-04-17'      # YYYY-MM-DD
 def optionchaindate(subjacente, vencimento):
     url = f'https://opcoes.net.br/listaopcoes/completa?idAcao={subjacente}&listarVencimentos=false&cotacoes=true&vencimentos={vencimento}'
     r = requests.get(url).json()
