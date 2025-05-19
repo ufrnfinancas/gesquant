@@ -134,3 +134,29 @@ tenpairs = df_OU.head(10)
 
 # Salve o arquivo Excel
 tenpairs.to_excel('C:\\repo\\gesquant\\tenpairs.xlsx', index=False)
+
+# Plot de um par
+# Seleciona o primeiro par da lista dos top 10 pares cointegrados
+par_exemplo = tenpairs.iloc[9]
+ticker1 = par_exemplo['Acao1']
+ticker2 = par_exemplo['Acao2']
+
+# Cria a figura com dois eixos y
+fig, ax1 = plt.subplots(figsize=(12, 6))
+
+# Primeiro ativo (eixo da esquerda)
+ax1.plot(quotes.index, quotes[ticker1], 'b-', label=ticker1, linewidth=2)
+ax1.set_ylabel(f'Preço {ticker1} (R$)', color='b')
+ax1.tick_params(axis='y', labelcolor='b')
+
+# Segundo eixo y
+ax2 = ax1.twinx()
+ax2.plot(quotes.index, quotes[ticker2], 'g--', label=ticker2, linewidth=2)
+ax2.set_ylabel(f'Preço {ticker2} (R$)', color='g')
+ax2.tick_params(axis='y', labelcolor='g')
+
+# Título e layout
+plt.title(f'Preços Reais – {ticker1} (azul) e {ticker2} (verde)')
+fig.tight_layout()
+plt.grid(True)
+plt.show()
