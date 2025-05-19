@@ -30,6 +30,10 @@ plt.axvline(strike_prices[0], color='red', linestyle='--', linewidth=0.7, label=
 plt.axvline(strike_prices[1], color='blue', linestyle='--', linewidth=0.7, label='Strike 2')
 plt.legend()
 plt.grid(True)
+<<<<<<< HEAD
+=======
+plt.savefig('bull_spread_calls.png')
+>>>>>>> cacbc68fac6a1c081e8d38202920ff5954314b4b
 plt.show()
 
 # Agora um spread de baixa com puts
@@ -59,6 +63,10 @@ plt.axvline(strike_prices[0], color='red', linestyle='--', linewidth=0.7, label=
 plt.axvline(strike_prices[1], color='blue', linestyle='--', linewidth=0.7, label='Strike 2')
 plt.legend()
 plt.grid(True)
+<<<<<<< HEAD
+=======
+plt.savefig('bear_spread_puts.png')
+>>>>>>> cacbc68fac6a1c081e8d38202920ff5954314b4b
 plt.show()
 
 # Combina o Bull Spread com o Bear Spread e temos o Box Spread
@@ -75,4 +83,8 @@ plt.axvline(strike_prices[0], color='red', linestyle='--', linewidth=0.7, label=
 plt.axvline(strike_prices[1], color='blue', linestyle='--', linewidth=0.7, label='Strike 2')
 plt.legend()
 plt.grid(True)
+<<<<<<< HEAD
+=======
+plt.savefig('box_spread.png')
+>>>>>>> cacbc68fac6a1c081e8d38202920ff5954314b4b
 plt.show()
